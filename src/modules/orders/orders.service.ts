@@ -4,7 +4,7 @@ import {
   Product,
   Pedido,
   Box,
-} from 'src/application/dtos/create-order.dto';
+} from 'src/modules/orders/create-order.dto';
 
 @Injectable()
 export class OrdersService {

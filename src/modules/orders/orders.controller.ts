@@ -1,10 +1,7 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiBody } from '@nestjs/swagger';
-import { OrdersService } from 'src/domain/services/orders.service';
-import {
-  CreateOrderRequestDto,
-  CreateOrderResponseDto,
-} from '../dtos/create-order.dto';
+import { OrdersService } from 'src/modules/orders/orders.service';
+import { CreateOrderRequestDto, CreateOrderResponseDto } from './create-order.dto';
 
 @ApiTags('orders')
 @Controller('/orders')
