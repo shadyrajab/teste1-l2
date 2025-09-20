@@ -1,6 +1,6 @@
 import { OrdersService } from './orders.service';
 
-describe('Orders - Teste Básico', () => {
+describe('Orders', () => {
   let service: OrdersService;
 
   beforeEach(() => {
