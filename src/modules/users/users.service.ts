@@ -28,27 +28,4 @@ export class UsersService {
   async findById(id: number): Promise<User | null> {
     return this.usersRepository.findOne({ where: { id } });
   }
-
-  async findAll(): Promise<User[]> {
-    return this.usersRepository.find();
-  }
-
-  async update(id: number, updateData: Partial<CreateUserDto>): Promise<User> {
-    const user = await this.findById(id);
-    if (!user) {
-      throw new NotFoundException('Usuário não encontrado');
-    }
-
-    Object.assign(user, updateData);
-    return this.usersRepository.save(user);
-  }
-
-  async remove(id: number): Promise<void> {
-    const user = await this.findById(id);
-    if (!user) {
-      throw new NotFoundException('Usuário não encontrado');
-    }
-
-    await this.usersRepository.remove(user);
-  }
 }
